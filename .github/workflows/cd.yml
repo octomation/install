@@ -33,7 +33,7 @@ jobs:
 
       - name: Upload the documentation
         uses: actions/upload-pages-artifact@v2
-        with: { path: . }
+        with: { path: dist }
 
   deploy:
     name: Deploying
@@ -67,6 +67,5 @@ jobs:
         uses: ./.github/actions/notify
         continue-on-error: true
         with:
-          emoji: 🖼️
           channel: ${{ secrets.SLACK_WEBHOOK }}
           success: ${{ ! contains(needs.*.result, 'failure') }}
