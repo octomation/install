@@ -1,0 +1,51 @@
+name: Continuous integration (godownloader)
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: The reason for dispatching it manually.
+        type: string
+        default: manual healthcheck
+        required: true
+
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/ci.godownloader.yml'
+      - 'dist/godownloader'
+
+  schedule:
+    - cron: '0 7 * * 1' # at 07:00 on Monday, UTC
+
+jobs:
+  check:
+    name: Checking
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with: { fetch-depth: 0 }
+
+      - name: Check consistency
+        uses: ./.github/actions/check
+        with: { script: godownloader.bash }
+
+  notify:
+    name: Notifying
+    needs: [ check ]
+    runs-on: ubuntu-latest
+    if: failure() || success()
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with: { fetch-depth: 0 }
+
+      - name: Send notification
+        uses: ./.github/actions/notify
+        continue-on-error: true
+        with:
+          channel: ${{ secrets.SLACK_WEBHOOK }}
+          success: ${{ ! contains(needs.*.result, 'failure') }}
