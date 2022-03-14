@@ -1,0 +1,65 @@
+name: Workflow cleanup
+
+on:
+  workflow_dispatch:
+    inputs:
+      pattern:
+        description: The name of workflow to clean.
+        type: choice
+        options:
+          - All
+          - Content delivery
+          - Continuous integration (godownloader)
+          - Continuous integration (goimports)
+          - Continuous integration (golangci-lint)
+          - Continuous integration (maintainer)
+          - Workflow cleanup
+        default: Workflow cleanup
+        required: true
+      dry_run:
+        description: Only log actions, do not perform any delete operations.
+        type: boolean
+        required: false
+      reason:
+        description: The reason for dispatching it manually.
+        type: string
+        default: manual healthcheck
+        required: true
+
+  schedule:
+    - cron: 0 7 1 * * # at 07:00 on day-of-month 1, UTC
+
+jobs:
+  delete:
+    name: Deleting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          delete_workflow_pattern: ${{ github.event.inputs.pattern || 'all' }}
+          dry_run: ${{ fromJSON('["", "true"]')[github.event.inputs.dry_run == 'true'] }}
+          retain_days: 0
+          keep_minimum_runs: 0
+
+  notify:
+    name: Notifying
+    needs: [ delete ]
+    runs-on: ubuntu-latest
+    if: failure() || success()
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with: { fetch-depth: 0 }
+
+      - name: Send notification
+        uses: ./.github/actions/notify
+        continue-on-error: true
+        with:
+          emoji: 🧹
+          channel: ${{ secrets.SLACK_WEBHOOK }}
+          success: ${{ ! contains(needs.*.result, 'failure') }}
