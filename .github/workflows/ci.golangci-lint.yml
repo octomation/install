@@ -12,6 +12,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - '.github/actions/check/golangci-lint.bash'
       - '.github/workflows/ci.golangci-lint.yml'
       - 'dist/golangci-lint'
 

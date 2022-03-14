@@ -12,6 +12,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - '.github/actions/check/godownloader.bash'
       - '.github/workflows/ci.godownloader.yml'
       - 'dist/godownloader'
 

@@ -12,6 +12,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - '.github/actions/check/goimports.bash'
       - '.github/workflows/ci.goimports.yml'
       - 'dist/goimports'
 

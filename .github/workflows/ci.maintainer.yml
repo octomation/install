@@ -12,6 +12,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - '.github/actions/check/maintainer.bash'
       - '.github/workflows/ci.maintainer.yml'
       - 'dist/maintainer'
 
