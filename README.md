@@ -44,6 +44,6 @@ $ curl -sSfL https://install.octolab.org/maintainer | sh
 
 <p align="right">made with ❤️ for everyone by <a href="https://www.octolab.org/">OctoLab</a></p>
 
-[social.preview]:   https://cdn.octolab.org/socialify/install.png
+[social.preview]:   https://cdn.octolab.org/repo/install.png
 [preview.config]:   https://socialify.git.ci/octomation/install?description=1&font=Raleway&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Light
 [preview.fallback]: https://socialify.git.ci/octomation/install/image?description=1&font=Raleway&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Light
