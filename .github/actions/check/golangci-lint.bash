@@ -12,6 +12,6 @@ expected="$(
   gh repo view kamilsk/golangci-lint \
     --json latestRelease --jq .latestRelease.tagName
 )"
-obtained="v$(golangci-lint --version | awk -F' ' '{print $4}')"
+obtained="v$(golangci-lint version | awk -F' ' '{print $4}')"
 
 [ "${obtained}" == "${expected}" ] || @fatal "expected ${expected}, obtained ${obtained}"
