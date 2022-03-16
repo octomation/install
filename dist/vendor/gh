@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# shellcheck source={lib}/utils/os.bash     # @arch @os
+# shellcheck source={lib}/utils/print.bash  # @fatal
+
+@arch() { uname -m; }
+
+@os() { uname -s | tr '[:upper:]' '[:lower:]'; }
+
+@error() { echo "${@}" >&2; }
+
+@fatal() { @error "${@}" && exit 1; }
+
+set -euo pipefail
+
+@install-gh() {
+  local force=false version=2.32.1
+
+  local arg skip=false
+  for arg in "${@}"; do
+    if $skip; then
+      skip=false
+      continue
+    fi
+    case "${arg}" in
+    -f | --force)
+      force=true
+      shift
+      ;;
+    --version)
+      version="${2}"
+      shift 2
+      skip=true
+      ;;
+    esac
+  done
+
+  if command -v gh >/dev/null && ! $force; then
+    [[ $(gh version | head -1 | awk '{print $3}') == "${version}" ]] && return
+  fi
+
+  local file
+  case $(@os) in
+  darwin) file="gh_${version}_macOS_$(@arch).zip" ;;
+  linux) file="gh_${version}_linux_$(@arch).tar.gz" ;;
+  *) @fatal there is no supported binary ;;
+  esac
+
+  local path=${1} src=https://github.com/cli/cli
+  curl -sSfL "${src}/releases/download/v${version}/${file}" -o "${path}/${file}"
+  case "${file##*.}" in
+  gz) tar -xzf "${path}/${file}" --strip-components=2 -C "${path}" "${file%.tar.gz}/bin/gh" ;;
+  zip) unzip -jo -d "${path}" "${path}/${file}" "${file%.zip}/bin/gh" >/dev/null ;;
+  esac
+  rm -f "${path}/${file}"
+}
+
+@install-gh "${@}"
