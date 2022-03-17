@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# shellcheck source={lib}/utils/os.bash     # @arch @os
+# shellcheck source={lib}/utils/print.bash  # @fatal
+
+@arch() { uname -m; }
+
+@os() { uname -s | tr '[:upper:]' '[:lower:]'; }
+
+@error() { echo "${@}" >&2; }
+
+@fatal() { @error "${@}" && exit 1; }
+
+set -euo pipefail
+
+@install-okteto() {
+  local force=false version=2.18.1
+
+  local arg skip=false
+  for arg in "${@}"; do
+    if $skip; then
+      skip=false
+      continue
+    fi
+    case "${arg}" in
+    -f | --force)
+      force=true
+      shift
+      ;;
+    --version)
+      version="${2}"
+      shift 2
+      skip=true
+      ;;
+    esac
+  done
+
+  if command -v okteto >/dev/null && ! $force; then
+    [[ $(okteto version | awk '{print $3}') == "${version}" ]] && return
+  fi
+
+  local file
+  case $(@os) in
+  darwin) file="okteto-Darwin-$(@arch)" ;;
+  linux) file="okteto-Linux-$(@arch)" ;;
+  *) @fatal there is no supported binary ;;
+  esac
+
+  local path=${1} src=https://github.com/okteto/okteto
+  curl -sSfL "${src}/releases/download/${version}/${file}" -o "${path}/okteto"
+  chmod +x "${path}/okteto"
+}
+
+@install-okteto "$@"
