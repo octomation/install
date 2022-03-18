@@ -8,6 +8,9 @@ set -euo pipefail
 }
 
 include=(
+  bin/lib/utils/*.bash
+  bin/lib/git/*.bash
+  bin/lib/tools/*.bash
   bin/lib/config/*.bash
   bin/lib/main.bash
 )
