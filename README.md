@@ -67,6 +67,32 @@ maintainer version
 
 [maintainer]: https://maintainer.octolab.org/
 
+<details>
+  <summary><h2>Experimental 🤫</h2></summary>
+
+### [gum][]
+
+Remotely
+
+```bash
+curl -sSfL https://install.octolab.org/vendor/gum | sh -s -- /usr/local/bin
+gum --help
+gum --version
+```
+
+Locally
+
+```bash
+alias run=./Taskfile
+run @install ./dist/vendor/gum ./bin/{os}/{arch}
+run gum --help
+run gum --version
+```
+
+[gum]: https://github.com/charmbracelet/gum
+
+</details>
+
 <p align="right">made with ❤️ for everyone by <a href="https://www.octolab.org/">OctoLab</a></p>
 
 [social.preview]:   https://cdn.octolab.org/repo/install.png
