@@ -12,6 +12,6 @@ expected="$(
   gh repo view kamilsk/go-tools \
     --json latestRelease --jq .latestRelease.tagName
 )"
-obtained="v$({ goimports -version todo 2>/dev/null || true; } | awk -F, '{print $1}')"
+obtained="v$({ goimports -version 2>/dev/null || true; } | awk -F, '{print $1}')"
 
 [ "${obtained}" == "${expected}" ] || @fatal "expected ${expected}, obtained ${obtained}"
