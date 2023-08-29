@@ -57,6 +57,31 @@ golangci-lint version
 [golangci-lint]: https://golangci-lint.octolab.org/
 
 
+### 🧩 [go-service][]
+
+```bash
+curl -sSfL https://install.octolab.org/service | sh -s -- -b /usr/local/bin
+server help
+server version
+
+serverctl help
+serverctl version
+```
+
+[go-service]: https://go-service.octolab.org/
+
+
+### 🧩 [go-tool][]
+
+```bash
+curl -sSfL https://install.octolab.org/tool | sh -s -- -b /usr/local/bin
+tool help
+tool version
+```
+
+[go-tool]: https://go-tool.octolab.org/
+
+
 ### 👨‍🔧 [maintainer][]
 
 ```bash

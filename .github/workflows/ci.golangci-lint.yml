@@ -1,14 +1,6 @@
 name: Continuous integration (golangci-lint)
 
 on:
-  workflow_dispatch:
-    inputs:
-      reason:
-        description: The reason for dispatching it manually.
-        type: string
-        default: manual healthcheck
-        required: true
-
   push:
     branches: [ main ]
     paths:
@@ -18,6 +10,14 @@ on:
 
   schedule:
     - cron: '0 7 * * 1' # at 07:00 on Monday, UTC
+
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: The reason for dispatching it manually.
+        type: string
+        default: manual healthcheck
+        required: true
 
 jobs:
   check:

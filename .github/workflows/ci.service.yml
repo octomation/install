@@ -1,12 +1,12 @@
-name: Continuous integration (goimports)
+name: Continuous integration (service template)
 
 on:
   push:
     branches: [ main ]
     paths:
-      - '.github/actions/check/goimports.bash'
-      - '.github/workflows/ci.goimports.yml'
-      - 'dist/goimports'
+      - '.github/actions/check/service.bash'
+      - '.github/workflows/ci.service.yml'
+      - 'dist/service'
 
   schedule:
     - cron: '0 7 * * 1' # at 07:00 on Monday, UTC
@@ -31,7 +31,7 @@ jobs:
 
       - name: Check consistency
         uses: ./.github/actions/check
-        with: { script: goimports.bash }
+        with: { script: service.bash }
 
   notify:
     name: Notifying
