@@ -13,7 +13,7 @@
 set -euo pipefail
 
 @install-jq() {
-  local force=false version=1.6
+  local force=false version=1.7
 
   local arg skip=false
   for arg in "${@}"; do
@@ -40,8 +40,8 @@ set -euo pipefail
 
   local file
   case $(@os) in
-  darwin) file=jq-osx-amd64 ;;
-  linux) file=jq-linux64 ;;
+  darwin) file="jq_macos_$(@arch)" ;;
+  linux) file="jq_linux_$(@arch)" ;;
   *) @fatal there is no supported binary ;;
   esac
 
