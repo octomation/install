@@ -13,7 +13,7 @@
 set -euo pipefail
 
 @install-wait-for-it() {
-  local force=false version=0.2.13
+  local force=false version=0.2.14
 
   local arg skip=false
   for arg in "${@}"; do
