@@ -134,6 +134,28 @@ maintainer version
 
 [maintainer]: https://maintainer.octolab.org/
 
+
+### ✨ [sparkle][]
+
+```bash
+curl -sSf https://install.octolab.org/sparkle | sh -s -- -b /usr/local/bin
+```
+
+```bash
+wget -qO- https://install.octolab.org/sparkle | sh -s -- -b /usr/local/bin
+```
+
+```bash
+sparkle help
+sparkle version
+
+sparklectl help
+sparklectl version
+```
+
+[sparkle]: https://sparkle.octolab.org/
+
+
 <details>
   <summary><h2>Experimental 🤫</h2></summary>
 
