@@ -27,7 +27,14 @@ As an alternative, you can use [Homebrew tap](https://brew.octolab.org/) for ins
 ### 🔧 [godownloader][] <sup>fork</sup>
 
 ```bash
-curl -sSfL https://install.octolab.org/godownloader | sh -s -- -b /usr/local/bin
+curl -sSf https://install.octolab.org/godownloader | sh -s -- -b /usr/local/bin
+```
+
+```bash
+wget -qO- https://install.octolab.org/godownloader | sh -s -- -b /usr/local/bin
+```
+
+```bash
 godownloader --help
 godownloader --version
 ```
@@ -38,7 +45,14 @@ godownloader --version
 ### 🔧 [goimports][] <sup>fork</sup>
 
 ```bash
-curl -sSfL https://install.octolab.org/goimports | sh -s -- -b /usr/local/bin
+curl -sSf https://install.octolab.org/goimports | sh -s -- -b /usr/local/bin
+```
+
+```bash
+wget -qO- https://install.octolab.org/goimports | sh -s -- -b /usr/local/bin
+```
+
+```bash
 goimports -h
 goimports -version todo
 ```
@@ -49,7 +63,14 @@ goimports -version todo
 ### 🔧 [golangci-lint][] <sup>fork</sup>
 
 ```bash
-curl -sSfL https://install.octolab.org/golangci-lint | sh -s -- -b /usr/local/bin
+curl -sSf https://install.octolab.org/golangci-lint | sh -s -- -b /usr/local/bin
+```
+
+```bash
+wget -qO- https://install.octolab.org/golangci-lint | sh -s -- -b /usr/local/bin
+```
+
+```bash
 golangci-lint help
 golangci-lint version
 ```
@@ -60,7 +81,14 @@ golangci-lint version
 ### 🧩 [go-service][]
 
 ```bash
-curl -sSfL https://install.octolab.org/service | sh -s -- -b /usr/local/bin
+curl -sSf https://install.octolab.org/service | sh -s -- -b /usr/local/bin
+```
+
+```bash
+wget -qO- https://install.octolab.org/service | sh -s -- -b /usr/local/bin
+```
+
+```bash
 server help
 server version
 
@@ -74,7 +102,14 @@ serverctl version
 ### 🧩 [go-tool][]
 
 ```bash
-curl -sSfL https://install.octolab.org/tool | sh -s -- -b /usr/local/bin
+curl -sSf https://install.octolab.org/tool | sh -s -- -b /usr/local/bin
+```
+
+```bash
+wget -qO- https://install.octolab.org/tool | sh -s -- -b /usr/local/bin
+```
+
+```bash
 tool help
 tool version
 ```
@@ -85,7 +120,14 @@ tool version
 ### 👨‍🔧 [maintainer][]
 
 ```bash
-curl -sSfL https://install.octolab.org/maintainer | sh -s -- -b /usr/local/bin
+curl -sSf https://install.octolab.org/maintainer | sh -s -- -b /usr/local/bin
+```
+
+```bash
+wget -qO- https://install.octolab.org/maintainer | sh -s -- -b /usr/local/bin
+```
+
+```bash
 maintainer help
 maintainer version
 ```
@@ -100,7 +142,14 @@ maintainer version
 Remotely
 
 ```bash
-curl -sSfL https://install.octolab.org/vendor/gum | bash -s -- /usr/local/bin
+curl -sSf https://install.octolab.org/vendor/gum | bash -s -- /usr/local/bin
+```
+
+```bash
+wget -qO- https://install.octolab.org/vendor/gum | bash -s -- /usr/local/bin
+```
+
+```bash
 gum --help
 gum --version
 ```
