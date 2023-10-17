@@ -46,7 +46,7 @@ set -euo pipefail
   esac
 
   local path=${1} src=https://github.com/roerohan/wait-for-it
-  curl -sSfL "${src}/releases/download/v${version}/${file}" -o "${path}/wait-for-it"
+  curl -sSf "${src}/releases/download/v${version}/${file}" -o "${path}/wait-for-it"
   chmod +x "${path}/wait-for-it"
 }
 

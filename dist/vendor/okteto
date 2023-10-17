@@ -46,7 +46,7 @@ set -euo pipefail
   esac
 
   local path=${1} src=https://github.com/okteto/okteto
-  curl -sSfL "${src}/releases/download/${version}/${file}" -o "${path}/okteto"
+  curl -sSf "${src}/releases/download/${version}/${file}" -o "${path}/okteto"
   chmod +x "${path}/okteto"
 }
 

@@ -5,7 +5,7 @@ set -euo pipefail
 @error() { echo "${@}" >&2; }
 @fatal() { @error "${@}" && exit 1; }
 
-curl -sSfL https://install.octolab.org/godownloader |
+curl -sSf https://install.octolab.org/godownloader |
   sh -s -- -b /usr/local/bin -dx
 
 expected="$(

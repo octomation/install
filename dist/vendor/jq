@@ -46,7 +46,7 @@ set -euo pipefail
   esac
 
   local path=${1} src=https://github.com/jqlang/jq
-  curl -sSfL "${src}/releases/download/jq-${version}/${file}" -o "${path}/jq"
+  curl -sSf "${src}/releases/download/jq-${version}/${file}" -o "${path}/jq"
   chmod +x "${path}/jq"
 }
 

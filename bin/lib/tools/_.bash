@@ -28,10 +28,10 @@ export GOBIN="${_BINPATH}"
   ]
 
   if [[ "${script}" =~ ^https://install.octolab.org/vendor ]]; then
-    curl -sSfL "${script}" | bash -s -- "${path}"
+    curl -sSf "${script}" | bash -s -- "${path}"
     return $?
   elif [[ "${script}" =~ ^https://install.octolab.org ]]; then
-    curl -sSfL "${script}" | sh -s -- -b "${path}"
+    curl -sSf "${script}" | sh -s -- -b "${path}"
     return $?
   fi
   ${script} "${path}"

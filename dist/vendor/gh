@@ -46,7 +46,7 @@ set -euo pipefail
   esac
 
   local path=${1} src=https://github.com/cli/cli
-  curl -sSfL "${src}/releases/download/v${version}/${file}" -o "${path}/${file}"
+  curl -sSf "${src}/releases/download/v${version}/${file}" -o "${path}/${file}"
   case "${file##*.}" in
   gz) tar -xzf "${path}/${file}" --strip-components=2 -C "${path}" "${file%.tar.gz}/bin/gh" ;;
   zip) unzip -jo -d "${path}" "${path}/${file}" "${file%.zip}/bin/gh" >/dev/null ;;

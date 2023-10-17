@@ -46,7 +46,7 @@ set -euo pipefail
   esac
 
   local path=${1} src=https://github.com/charmbracelet/gum
-  curl -sSfL "${src}/releases/download/v${version}/${file}" -o "${path}/${file}"
+  curl -sSf "${src}/releases/download/v${version}/${file}" -o "${path}/${file}"
   tar -xzf "${path}/${file}" -C "${path}" gum
   rm -f "${path}/${file}"
 }

@@ -46,7 +46,7 @@ set -euo pipefail
   esac
 
   local path=${1} src=https://github.com/mpalmer/action-validator
-  curl -sSfL "${src}/releases/download/v${version}/${file}" -o "${path}/action-validator"
+  curl -sSf "${src}/releases/download/v${version}/${file}" -o "${path}/action-validator"
   chmod +x "${path}/action-validator"
 }
 
