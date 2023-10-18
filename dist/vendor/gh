@@ -45,7 +45,7 @@ set -euo pipefail
   *) @fatal there is no supported binary ;;
   esac
 
-  local path=${1} src=https://github.com/cli/cli
+  local path=${1:-./bin} src=https://github.com/cli/cli
   curl -sSf "${src}/releases/download/v${version}/${file}" -o "${path}/${file}"
   case "${file##*.}" in
   gz) tar -xzf "${path}/${file}" --strip-components=2 -C "${path}" "${file%.tar.gz}/bin/gh" ;;

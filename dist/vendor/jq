@@ -45,7 +45,7 @@ set -euo pipefail
   *) @fatal there is no supported binary ;;
   esac
 
-  local path=${1} src=https://github.com/jqlang/jq
+  local path=${1:-./bin} src=https://github.com/jqlang/jq
   curl -sSf "${src}/releases/download/jq-${version}/${file}" -o "${path}/jq"
   chmod +x "${path}/jq"
 }

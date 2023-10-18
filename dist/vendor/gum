@@ -45,7 +45,7 @@ set -euo pipefail
   *) @fatal there is no supported binary ;;
   esac
 
-  local path=${1} src=https://github.com/charmbracelet/gum
+  local path=${1:-./bin} src=https://github.com/charmbracelet/gum
   curl -sSf "${src}/releases/download/v${version}/${file}" -o "${path}/${file}"
   tar -xzf "${path}/${file}" -C "${path}" gum
   rm -f "${path}/${file}"

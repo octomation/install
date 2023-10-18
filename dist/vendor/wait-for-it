@@ -45,7 +45,7 @@ set -euo pipefail
   *) @fatal there is no supported binary ;;
   esac
 
-  local path=${1} src=https://github.com/roerohan/wait-for-it
+  local path=${1:-./bin} src=https://github.com/roerohan/wait-for-it
   curl -sSf "${src}/releases/download/v${version}/${file}" -o "${path}/wait-for-it"
   chmod +x "${path}/wait-for-it"
 }

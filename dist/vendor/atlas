@@ -28,7 +28,7 @@ set -euo pipefail
     [[ $(atlas version | head -1 | awk '{print $4}') == "${version}" ]] && return
   fi
 
-  local path=${1} src=https://atlasgo.sh
+  local path=${1:-./bin} src=https://atlasgo.sh
   curl -sSf ${src} | ATLAS_VERSION=${version} sh -s -- -y -o "${path}/atlas" --community --no-install
   chmod +x "${path}/atlas"
 }

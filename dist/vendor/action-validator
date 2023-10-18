@@ -45,7 +45,7 @@ set -euo pipefail
   *) @fatal there is no supported binary ;;
   esac
 
-  local path=${1} src=https://github.com/mpalmer/action-validator
+  local path=${1:-./bin} src=https://github.com/mpalmer/action-validator
   curl -sSf "${src}/releases/download/v${version}/${file}" -o "${path}/action-validator"
   chmod +x "${path}/action-validator"
 }
