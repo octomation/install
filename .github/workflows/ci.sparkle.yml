@@ -1,0 +1,51 @@
+name: Continuous integration (sparkle)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/actions/check/sparkle.bash'
+      - '.github/workflows/ci.sparkle.yml'
+      - 'dist/sparkle'
+
+  schedule:
+    - cron: '0 7 * * 1' # at 07:00 on Monday, UTC
+
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: The reason for dispatching it manually.
+        type: string
+        default: manual healthcheck
+        required: true
+
+jobs:
+  check:
+    name: Checking
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4.1.0
+        with: { fetch-depth: 0 }
+
+      - name: Check consistency
+        uses: ./.github/actions/check
+        with: { script: sparkle.bash }
+
+  notify:
+    name: Notifying
+    needs: [ check ]
+    runs-on: ubuntu-latest
+    if: failure() || success()
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4.1.0
+        with: { fetch-depth: 0 }
+
+      - name: Send notification
+        uses: ./.github/actions/notify
+        with:
+          channel: ${{ secrets.SLACK_WEBHOOK }}
+          success: ${{ ! contains(needs.*.result, 'failure') }}

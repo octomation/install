@@ -17,6 +17,7 @@ on:
           - Continuous integration (golangci-lint)
           - Continuous integration (maintainer)
           - Continuous integration (service template)
+          - Continuous integration (sparkle)
           - Continuous integration (tool template)
           - Workflow runs cleanup
         default: Workflow runs cleanup
