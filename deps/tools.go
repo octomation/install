@@ -7,6 +7,5 @@ package tools
 import (
 	_ "github.com/charmbracelet/gum"
 	_ "github.com/cli/cli/v2/cmd/gh"
-	_ "github.com/okteto/okteto"
 	_ "github.com/roerohan/wait-for-it"
 )
