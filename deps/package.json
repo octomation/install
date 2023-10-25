@@ -1,6 +1,6 @@
 {
   "private": true,
   "dependencies": {
-    "@ariga/atlas": "^0.14.2"
+    "@ariga/atlas": "^0.15.0"
   }
 }
