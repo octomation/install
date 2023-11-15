@@ -6,7 +6,7 @@ toolchain go1.21.0
 
 require (
 	github.com/charmbracelet/gum v0.11.0
-	github.com/cli/cli/v2 v2.38.0
+	github.com/cli/cli/v2 v2.39.1
 	github.com/roerohan/wait-for-it v0.2.14
 )
 
@@ -48,7 +48,7 @@ require (
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-version v1.3.0 // indirect
-	github.com/henvic/httpretty v0.1.2 // indirect
+	github.com/henvic/httpretty v0.1.3 // indirect
 	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/itchyny/gojq v0.12.13 // indirect
 	github.com/itchyny/timefmt-go v0.1.5 // indirect
