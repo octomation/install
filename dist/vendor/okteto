@@ -13,7 +13,7 @@
 set -euo pipefail
 
 @install-okteto() {
-  local force=false version=2.22.2
+  local force=false version=2.22.3
 
   local arg skip=false
   for arg in "${@}"; do
