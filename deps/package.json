@@ -1,7 +1,8 @@
 {
   "private": true,
   "dependencies": {
-    "@ariga/atlas": "^0.15.0",
-    "neonctl": "^1.23.3"
+    "@action-validator/cli": "^0.5.4",
+    "@ariga/atlas": "^0.17.0",
+    "neonctl": "^1.25.2"
   }
 }
