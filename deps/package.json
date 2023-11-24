@@ -2,6 +2,6 @@
   "private": true,
   "dependencies": {
     "@ariga/atlas": "^0.15.0",
-    "neonctl": "^1.23.3"
+    "neonctl": "^1.24.0"
   }
 }
