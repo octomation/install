@@ -39,10 +39,10 @@ github.com/charmbracelet/lipgloss v0.7.2-0.20230316100548-06dd20ee5707/go.mod h1
 github.com/cli/browser v1.0.0/go.mod h1:IEWkHYbLjkhtjwwWlwTHW2lGxeS5gezEQBMLTwDHf5Q=
 github.com/cli/browser v1.3.0 h1:LejqCrpWr+1pRqmEPDGnTZOjsMe7sehifLynZJuqJpo=
 github.com/cli/browser v1.3.0/go.mod h1:HH8s+fOAxjhQoBUAsKuPCbqUuxZDhQ2/aD+SzsEfBTk=
-github.com/cli/cli/v2 v2.39.1 h1:Yq1CO5bVUFXun+fHm9jyWAHyXSbR7AZjMdr1EBY5bU0=
-github.com/cli/cli/v2 v2.39.1/go.mod h1:FTjJ4UoGOr9W0XCtO/0zUuRCSBei3wiUIOYjIvWQY+g=
-github.com/cli/go-gh/v2 v2.4.1-0.20231024095351-47a83eeb1778 h1:2WcQtkNIafTIimwJJUTzFLqXO3BH4avCAcWQT22xiKc=
-github.com/cli/go-gh/v2 v2.4.1-0.20231024095351-47a83eeb1778/go.mod h1:h3salfqqooVpzKmHp6aUdeNx62UmxQRpLbagFSHTJGQ=
+github.com/cli/cli/v2 v2.39.2 h1:JVP7rCHX3C82KxEeqvXRYKj0LwQacAen1tR+/kgt8Lg=
+github.com/cli/cli/v2 v2.39.2/go.mod h1:q6ZoljEQgSY46xia+hiDrtIXO/JfBX6JyzT4KsgCkks=
+github.com/cli/go-gh/v2 v2.4.1-0.20231120145612-d32c104a9a25 h1:m2opPgNTaKx1QydI4NfGdZqiYkA/Kl9a7tsDSjHgWWg=
+github.com/cli/go-gh/v2 v2.4.1-0.20231120145612-d32c104a9a25/go.mod h1:h3salfqqooVpzKmHp6aUdeNx62UmxQRpLbagFSHTJGQ=
 github.com/cli/oauth v1.0.1 h1:pXnTFl/qUegXHK531Dv0LNjW4mLx626eS42gnzfXJPA=
 github.com/cli/oauth v1.0.1/go.mod h1:qd/FX8ZBD6n1sVNQO3aIdRxeu5LGw9WhKnYhIIoC2A4=
 github.com/cli/safeexec v1.0.0/go.mod h1:Z/D4tTN8Vs5gXYHDCbaM1S/anmEDnJb1iW0+EJ5zx3Q=
@@ -54,8 +54,8 @@ github.com/containerd/console v1.0.4-0.20230313162750-1ae8d489ac81 h1:q2hJAaP1k2
 github.com/containerd/console v1.0.4-0.20230313162750-1ae8d489ac81/go.mod h1:YynlIjWYF8myEu6sdkwKIvGQq+cOckRm6So2avqoYAk=
 github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/creack/pty v1.1.17/go.mod h1:MOBLtS5ELjhRRrroQr9kyvTxUAFNvYEK993ew/Vr4O4=
-github.com/creack/pty v1.1.20 h1:VIPb/a2s17qNeQgDnkfZC35RScx+blkKF8GV68n80J4=
-github.com/creack/pty v1.1.20/go.mod h1:MOBLtS5ELjhRRrroQr9kyvTxUAFNvYEK993ew/Vr4O4=
+github.com/creack/pty v1.1.21 h1:1/QdRyBaHHJP61QkWMXlOIBfsgdDeeKfK8SYVUWJKf0=
+github.com/creack/pty v1.1.21/go.mod h1:MOBLtS5ELjhRRrroQr9kyvTxUAFNvYEK993ew/Vr4O4=
 github.com/danieljoos/wincred v1.2.0 h1:ozqKHaLK0W/ii4KVbbvluM91W2H3Sh0BncbUNPS7jLE=
 github.com/danieljoos/wincred v1.2.0/go.mod h1:FzQLLMKBFdvu+osBrnFODiv32YGwCfx0SkRa/eYHgec=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
