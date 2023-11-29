@@ -6,7 +6,7 @@ toolchain go1.21.0
 
 require (
 	github.com/charmbracelet/gum v0.12.0
-	github.com/cli/cli/v2 v2.39.1
+	github.com/cli/cli/v2 v2.39.2
 	github.com/roerohan/wait-for-it v0.2.14
 )
 
@@ -28,7 +28,7 @@ require (
 	github.com/charmbracelet/lipgloss v0.9.1 // indirect
 	github.com/charmbracelet/log v0.3.0 // indirect
 	github.com/cli/browser v1.3.0 // indirect
-	github.com/cli/go-gh/v2 v2.4.1-0.20231024095351-47a83eeb1778 // indirect
+	github.com/cli/go-gh/v2 v2.4.1-0.20231120145612-d32c104a9a25 // indirect
 	github.com/cli/oauth v1.0.1 // indirect
 	github.com/cli/safeexec v1.0.1 // indirect
 	github.com/cli/shurcooL-graphql v0.0.4 // indirect
