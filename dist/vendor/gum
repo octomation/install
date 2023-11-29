@@ -13,7 +13,7 @@
 set -euo pipefail
 
 @install-gum() {
-  local force=false version=0.11.0
+  local force=false version=0.12.0
 
   local arg skip=false
   for arg in "${@}"; do
