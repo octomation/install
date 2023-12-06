@@ -13,7 +13,7 @@
 set -euo pipefail
 
 @install-gh() {
-  local force=false version=2.38.1
+  local force=false version=2.38.2
 
   local arg skip=false
   for arg in "${@}"; do
