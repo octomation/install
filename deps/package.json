@@ -3,6 +3,6 @@
   "dependencies": {
     "@action-validator/cli": "^0.5.4",
     "@ariga/atlas": "^0.15.0",
-    "neonctl": "^1.24.0"
+    "neonctl": "^1.24.2"
   }
 }
