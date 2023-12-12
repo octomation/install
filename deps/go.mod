@@ -5,8 +5,8 @@ go 1.21
 toolchain go1.21.0
 
 require (
-	github.com/charmbracelet/gum v0.11.0
-	github.com/cli/cli/v2 v2.39.1
+	github.com/charmbracelet/gum v0.12.0
+	github.com/cli/cli/v2 v2.40.0
 	github.com/roerohan/wait-for-it v0.2.14
 )
 
@@ -14,7 +14,7 @@ require (
 	github.com/AlecAivazis/survey/v2 v2.3.7 // indirect
 	github.com/MakeNowJust/heredoc v1.0.0 // indirect
 	github.com/alecthomas/chroma/v2 v2.7.0 // indirect
-	github.com/alecthomas/kong v0.8.0 // indirect
+	github.com/alecthomas/kong v0.8.1 // indirect
 	github.com/alecthomas/mango-kong v0.1.0 // indirect
 	github.com/alessio/shellescape v1.4.1 // indirect
 	github.com/atotto/clipboard v0.1.4 // indirect
@@ -25,9 +25,10 @@ require (
 	github.com/charmbracelet/bubbles v0.16.1 // indirect
 	github.com/charmbracelet/bubbletea v0.24.2 // indirect
 	github.com/charmbracelet/glamour v0.6.1-0.20230531150759-6d5b52861a9d // indirect
-	github.com/charmbracelet/lipgloss v0.7.2-0.20230316100548-06dd20ee5707 // indirect
+	github.com/charmbracelet/lipgloss v0.9.1 // indirect
+	github.com/charmbracelet/log v0.3.0 // indirect
 	github.com/cli/browser v1.3.0 // indirect
-	github.com/cli/go-gh/v2 v2.4.1-0.20231024095351-47a83eeb1778 // indirect
+	github.com/cli/go-gh/v2 v2.4.1-0.20231120145612-d32c104a9a25 // indirect
 	github.com/cli/oauth v1.0.1 // indirect
 	github.com/cli/safeexec v1.0.1 // indirect
 	github.com/cli/shurcooL-graphql v0.0.4 // indirect
@@ -40,6 +41,7 @@ require (
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/gdamore/encoding v1.0.0 // indirect
 	github.com/gdamore/tcell/v2 v2.5.4 // indirect
+	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510 // indirect
@@ -58,7 +60,7 @@ require (
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-localereader v0.0.1 // indirect
-	github.com/mattn/go-runewidth v0.0.14 // indirect
+	github.com/mattn/go-runewidth v0.0.15 // indirect
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
 	github.com/microcosm-cc/bluemonday v1.0.26 // indirect
 	github.com/microsoft/dev-tunnels v0.0.25 // indirect
@@ -87,6 +89,7 @@ require (
 	github.com/yuin/goldmark-emoji v1.0.1 // indirect
 	github.com/zalando/go-keyring v0.2.3 // indirect
 	golang.org/x/crypto v0.14.0 // indirect
+	golang.org/x/exp v0.0.0-20231006140011-7918f672742d // indirect
 	golang.org/x/net v0.17.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
 	golang.org/x/sys v0.13.0 // indirect
