@@ -6,7 +6,7 @@ toolchain go1.21.0
 
 require (
 	github.com/charmbracelet/gum v0.13.0
-	github.com/cli/cli/v2 v2.40.0
+	github.com/cli/cli/v2 v2.40.1
 	github.com/roerohan/wait-for-it v0.2.14
 )
 

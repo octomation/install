@@ -41,8 +41,8 @@ github.com/charmbracelet/log v0.3.1/go.mod h1:OR4E1hutLsax3ZKpXbgUqPtTjQfrh1pG3z
 github.com/cli/browser v1.0.0/go.mod h1:IEWkHYbLjkhtjwwWlwTHW2lGxeS5gezEQBMLTwDHf5Q=
 github.com/cli/browser v1.3.0 h1:LejqCrpWr+1pRqmEPDGnTZOjsMe7sehifLynZJuqJpo=
 github.com/cli/browser v1.3.0/go.mod h1:HH8s+fOAxjhQoBUAsKuPCbqUuxZDhQ2/aD+SzsEfBTk=
-github.com/cli/cli/v2 v2.40.0 h1:iQrXHkhdASAyEYUyzzGVNxms63btvireT70FDFY7naU=
-github.com/cli/cli/v2 v2.40.0/go.mod h1:q6ZoljEQgSY46xia+hiDrtIXO/JfBX6JyzT4KsgCkks=
+github.com/cli/cli/v2 v2.40.1 h1:gLSpCirlYThOlWtHTlucgx+oha4ukmKhTULKJGMaOFU=
+github.com/cli/cli/v2 v2.40.1/go.mod h1:q6ZoljEQgSY46xia+hiDrtIXO/JfBX6JyzT4KsgCkks=
 github.com/cli/go-gh/v2 v2.4.1-0.20231120145612-d32c104a9a25 h1:m2opPgNTaKx1QydI4NfGdZqiYkA/Kl9a7tsDSjHgWWg=
 github.com/cli/go-gh/v2 v2.4.1-0.20231120145612-d32c104a9a25/go.mod h1:h3salfqqooVpzKmHp6aUdeNx62UmxQRpLbagFSHTJGQ=
 github.com/cli/oauth v1.0.1 h1:pXnTFl/qUegXHK531Dv0LNjW4mLx626eS42gnzfXJPA=
