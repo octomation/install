@@ -15,7 +15,7 @@ check() {
     return 1
   fi
 
-  retunr 0
+  return 0
 }
 
 install-apps() {
@@ -68,7 +68,6 @@ install-bundle() {
   echo Installing Homebrew bundle...
   brew update --force --quiet
   brew bundle --file="${root}"/toolset/Brewfile --no-upgrade -v
-  brew bundle --file="${root}"/toolset/Brewfile cleanup -v
   return $?
 }
 
